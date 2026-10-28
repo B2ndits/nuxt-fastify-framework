@@ -1,0 +1,16 @@
+{
+  "name": "nuxt-fastify-framework",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,green \"npm:dev:web\" \"npm:dev:server\"",
+    "dev:web": "npm run dev -w web",
+    "dev:server": "npm run dev -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
